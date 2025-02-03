@@ -1,11 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Payoo-MFS_Login_Page</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payoo-MFS_Login_Page</title>
+  <!-- DaisyUI -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-    
+  <main class="container max-w-md h-screen flex justify-center items-center border-4 border-slate-800 rounded-xl mx-auto p-4">
+    <form class="card-body">
+      <div class="form-control">
+        <label class="label">
+          <span class="label-text">Mobile number</span>
+        </label>
+        <input type="text" placeholder="Your mobile number" id="input-mobile-num" class="input input-bordered" required />
+      </div>
+      <div class="form-control">
+        <label class="label">
+          <span class="label-text">Pin number</span>
+        </label>
+        <input type="password" placeholder="Your pin number" id="input-pin" class="input input-bordered" required />
+        <label class="label">
+          <a href="#" class="label-text-alt link link-hover">Forgot password?</a>
+        </label>
+      </div>
+      <div class="form-control mt-6">
+        <button id="login-btn" class="btn btn-primary">Login</button>
+      </div>
+    </form>
+  </main>
+  <script src="script/login.js"></script>
 </body>
 </html>
