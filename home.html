@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payoo-MFS Home</title>
+    <!-- DaisyUI -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <main class="container max-w-md h-screen flex flex-col justify-center items-center border-4 border-slate-800 rounded-xl mx-auto p-4">
+        <div class="stats shadow">
+            <div class="stat">
+                <div id="available-balance" class="stat-value">8,400</div>
+                <div class="stat-desc mt-2 text-base">Available balance</div>
+            </div>
+        </div>
+        <div class="divider"></div>
+        <div>
+            <button class="btn btn-lg">Add money</button>
+            <button class="btn btn-lg">Cash out</button>
+            <div>
+                <form class="card-body">
+                    <div class="form-control">
+                      <label class="label">
+                        <span class="label-text">Amount</span>
+                      </label>
+                      <input type="text" placeholder="Deposit amount" id="input-amount" class="input input-bordered" required />
+                    </div>
+                    <div class="form-control">
+                      <label class="label">
+                        <span class="label-text">Pin number</span>
+                      </label>
+                      <input type="password" placeholder="Your pin" id="input-pin" class="input input-bordered" required />
+                    </div>
+                    <div class="form-control mt-6">
+                      <button id="add-money-btn" class="btn btn-primary">Add money</button>
+                    </div>
+                  </form>
+            </div>
+        </div>
+    </main>
+    <script src="script/home.js"></script>
+</body>
+</html>

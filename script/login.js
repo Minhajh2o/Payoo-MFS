@@ -8,6 +8,7 @@ document.getElementById('login-btn').addEventListener('click', function (event) 
     console.log('pinNum:', pinNum);
 
     if (mobileNum === '01571243180' || pinNum === '1230') {
+        window.location.href = '/home.html';
         console.log('login success');
     } else {
         alert('Wrong mobile number or pin');
