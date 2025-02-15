@@ -1,4 +1,4 @@
-document.getElementById('add-money-btn').addEventListener('click', function (event) {
+document.getElementById('add-money').addEventListener('click', function (event) {
     event.preventDefault();
 
     const inputAmount = getInputFieldValueByID('input-amount');
@@ -7,6 +7,10 @@ document.getElementById('add-money-btn').addEventListener('click', function (eve
     console.log('input amount:', inputAmount);
     console.log('pinNum:', pinNum);
 
+    if (isNaN(inputAmount)) {
+        alert('Please enter a valid number');
+        return;
+    }
     
     if (pinNum === 1230) {
         const availableBalance = getTextFieldValueByID('available-balance');
@@ -15,6 +19,10 @@ document.getElementById('add-money-btn').addEventListener('click', function (eve
         const newBalance = availableBalance + inputAmount;
         console.log('new balance:', newBalance);
         setTextFieldValueByID('available-balance', newBalance)
+
+        const p = document.createElement('p');
+        p.innerText = `Deposit amount $${inputAmount}`;
+        transactions.appendChild(p);
     } else {
         alert('Wrong amount or pin');
     }
